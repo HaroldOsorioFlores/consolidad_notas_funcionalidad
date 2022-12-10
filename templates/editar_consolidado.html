@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container-fluid col-4 bg-white">
+  <h2 style="text-align:center">EDITAR ALUMNOS</h2>
+
+  <form action="/update/{{dato.0}}" method="POST" class="p-3 mb-2 bg-white">
+        <div class="mb-3 mt-3">
+          <label for="pwd">DNI</label>
+          <input type="text" class="form-control" placeholder="DNI" name="codigo_alu" value="{{dato.0}}">
+        </div>
+        <div class="mb-3">
+          <label for="pwd">Nombre Completo</label>
+          <input type="text" class="form-control" placeholder="Nombre Completo" name="nombre_alu" value="{{dato.1}}">
+        </div>
+        <div class="mb-3">
+          <label for="pwd">Grado</label>
+          <input type="text" class="form-control" placeholder="Grado" name="grado" value="{{dato.2}}">
+        </div>
+        <div class="mb-3">
+          <label for="pwd">Seccion</label>
+          <input type="text" class="form-control" placeholder="Seccion" name="seccion" value="{{dato.3}}">
+        </div>
+          <button type="submit" class="btn btn-primary ">Enviar</button>
+      </form>
+</div>
+<div class="container position-relative col-4 ">
+  <div class="container p-2 mb-1 ">
+    <div class="">
+      <a class="btn btn-success " href="/">Atras</a>
+    </div>
+  </div>
+</div>
+
+{% endblock  %}

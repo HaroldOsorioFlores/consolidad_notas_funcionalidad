@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="row">
+    
+</div>
+
+
+			
+
+
+<div class="container ">
+    <form action="/buscar" method="POST" class="p-3 mb-2 bg-white">
+        <div class="mb-3 mt-3">
+          <label for="text">Ingresar codigo de alumno</label>
+          <input type="text" class="form-control" placeholder="codigo_alu" name="codigo_alu">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+        <a class="btn btn-primary" href="/añadir_datos">Ingresar</a>
+    </form>
+</div>
+
+<div class="row pt-4">
+
+</div>
+<div class="row pt-4">
+    
+</div>
+
+<div class="row pt-4 p-3 mb-2 bg-white">
+  <h2 style="text-align:left">LISTA DE ALUMNOS</h2>
+    <table class="table table-striped table-hover table-bordered table-sm bg-white">
+      <thead>
+        <tr>
+          <td>Codigo</td>
+          <td>Nombre</td>
+          <td>Grado</td>
+          <td>Seccion</td>
+          <td>Operacion</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for dato in datos %}
+        <tr>
+          <td>{{dato.0}}</td>
+          <td>{{dato.1}}</td>
+          <td>{{dato.2}}</td>
+          <td>{{dato.3}}</td>
+          <td>
+            <a href="/editar/{{dato.0}}">Editar</a>
+            <a href="/eliminar/{{dato.0}}">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+  <a class="btn btn-success float-right" href="/reportes">Reportes</a>
+
+  {% endblock  %}

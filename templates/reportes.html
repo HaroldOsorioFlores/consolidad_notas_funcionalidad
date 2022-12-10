@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+
+<section class="intro">
+    <div class="mask d-flex align-items-center h-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="row">
+                                                <h2 class="display-4 row justify-content-left">Reportes</h2>
+                                            </th>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1. Se requiere mostrar los nombres de los estudiantes de
+                                                cada
+                                                salón con su respectivo promedio de forma ordenada
+                                            </th>
+                                            <td><a class="btn btn-success float-center" href="/reporte1">Ir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2. Se requiere mostrar las areas que lleva cada alumno
+                                            </th>
+                                            <td><a class="btn btn-success float-center" href="/reporte2">Ir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3. Se requiere visualizar los estudiantes los cuales tengan
+                                                2 o más
+                                                cursos desaprobados para poder así ver cuáles van a nivelación
+                                            </th>
+                                            <td><a class="btn btn-success float-center" href="/reporte3">Ir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4. Se requiere visualizar los estudiantes que tengan más de
+                                                un
+                                                consolidado de notas de la I.E Trilce para saber quiénes llevan más de
+                                                un año en la I.E Trilce
+                                            </th>
+                                            <td><a class="btn btn-success float-center" href="/reporte4">Ir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5. Se requiere visualizar al estudiante con mayor nota en el
+                                                1er, 2do,
+                                                3er y 4to bimestre para poder saber cuál es el estudiante de excelencia
+                                                en el salón
+                                            </th>
+                                            <td><a class="btn btn-success float-center" href="/reporte5">Ir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6. Se requiere mostrar a los alumnos con menor promedio de
+                                                area, para
+                                                ver los peores puestos y tomar medidas al respecto</th>
+                                            <td><a class="btn btn-success float-center" href="/reporte6">Ir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7. Se requiere saber todas las areas</th>
+                                            <td><a class="btn btn-success float-center" href="/reporte7">Ir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8. Se requiere saber todos los cursos</th>
+                                            <td><a class="btn btn-success float-center" href="/reporte8">Ir</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+
+    </div>
+    <div class="mask d-flex align-items-right h-100">
+        <div class="container p-3 mb-2">
+            <div class="col-4">
+                <a class="btn btn-success " href="/">Atras</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

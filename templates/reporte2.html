@@ -1,0 +1,36 @@
+{# Que muestre las áreas que lleva cada alumno #}
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row pt-4 p-3 mb-2 bg-white">
+    <h2 style="text-align:left">Areas Estudiantes</h2>
+    <table class="table table-striped table-hover table-bordered table-sm bg-white">
+        <thead>
+            <tr>
+                <td>Codigo alumno</td>
+                <td>Alumno</td>
+                <td>Area</td>
+                <td>Operaciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dato in datos %}
+            <tr>
+                <td>{{dato.0}}</td>
+                <td>{{dato.1}}</td>
+                <td>{{dato.2}}</td>
+                <td>
+                    <a href="/editar_reporte2/{{dato.0}}">Editar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="row align-items-left ">
+    <div class="container p-2 mb-1">
+        <div class="">
+            <a class="btn btn-success " href="/reportes">Atras</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

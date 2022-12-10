@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+
+
+
+<div class="row ">
+    <div class="row">
+        <div class="align-items-center">
+            <div class="container p-3 mb-2">
+                <div class="col-4">
+                    <a class="btn btn-success " href="/">Atras</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid p-3 mb-2 bg-white">
+            <h2 style="text-align:center ">AÑADIR DATOS DEL ALUMNO</h2>
+            <form action="/add_alumno" method="POST">
+            <div class="mb-3 mt-3">
+              <label for="pwd">DNI</label>
+              <input type="text" class="form-control" placeholder="DNI" name="codigo_alu">
+            </div>
+            <div class="mb-3">
+              <label for="pwd">Nombre Completo</label>
+              <input type="text" class="form-control" placeholder="Nombre Completo" name="nombre_alu">
+            </div>
+            <div class="mb-3">
+              <label for="pwd">Grado</label>
+              <input type="text" class="form-control" placeholder="Grado" name="grado">
+            </div>
+            <div class="mb-3">
+              <label for="pwd">Seccion</label>
+              <input type="text" class="form-control" placeholder="Seccion" name="seccion">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary form-control">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-fluid p-3 mb-2 bg-white">
+        <h2 style="text-align:center">DATOS DEL CONSOLIDADO</h2>
+        <form action="/add_consolidado" method="POST">
+            <div class="mb-3 mt-3">
+            <label for="pwd">Codigo de consolidado</label>
+            <input type="text" class="form-control" placeholder="Codigo de consolidado" name="codigo_cn">
+            </div>
+            <div class="mb-3">
+            <label for="pwd">DNI</label>
+            <input type="text" class="form-control" placeholder="DNI" name="codigo_alu">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary form-control">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-fluid p-3 mb-2 bg-white">
+        <h2 style="text-align:center">AÑADIR NOTAS</h2>
+        <form action="/add_notas" method="POST">
+            <div class="mb-3 mt-3">
+                <label for="pwd">Codigo de consolidado</label>
+                <input type="text" class="form-control" placeholder="Codigo de consolidado" name="codigo_cn">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="pwd">Codigo de curso</label>
+                <input type="text" class="form-control" placeholder="Codigo_de_curso" name="codigo_curso">
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="pwd">Bimetre I</label>
+              <input type="text" class="form-control" placeholder="Bimetre I" name="nota_bimestre_I">
+            </div>
+            <div class="mb-3">
+              <label for="pwd">Bimetre II</label>
+              <input type="text" class="form-control" placeholder="Bimetre II" name="nota_bimestre_II">
+            </div>
+            <div class="mb-3">
+              <label for="pwd">Bimetre III</label>
+              <input type="text" class="form-control" placeholder="Bimetre III" name="nota_bimestre_III">
+            </div>
+            <div class="mb-3">
+              <label for="pwd">Bimetre IV</label>
+              <input type="text" class="form-control" placeholder="Bimetre IV" name="nota_bimestre_IV">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary form-control">Enviar</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <div class="container-fluid p-3 mb-2 bg-white">
+        <h2 style="text-align:center">PROMEDIO</h2>
+        <form action="/add_promedio" method="POST" class="">
+            <div class="mb-3 mt-3">
+            <label for="pwd">Codigo de consolidado</label>
+            <input type="text" class="form-control" placeholder="Codigo de consolidado" name="codigo_cn">
+            </div>
+            <div class="mb-3">
+            <label for="pwd">Codigo de area</label>
+            <input type="text" class="form-control" placeholder="Codigo de area" name="codigo_area">
+            </div>
+            <div class="mb-3">
+                <label for="pwd">Promedio</label>
+                <input type="text" class="form-control" placeholder="Promedio" name="promedio_area">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary form-control">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="container-fluid p-3 mb-2 bg-white">
+        <h2 style="text-align:center">Consolidados</h2>
+        <div class="container">
+            <table class="table table-striped table-hover table-bordered table-sm bg-white">
+                <thead>
+                <tr>
+                    <td>DNI</td>
+                    <td>Nombre</td>
+                    <td>Grado</td>
+                    <td>Seccion</td>
+                    <td>Curso</td>
+                    <td>BI</td>
+                    <td>BII</td>
+                    <td>BIII</td>
+                    <td>BIV</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for dato in datos %}
+                <tr>
+                    <td>{{dato.0}}</td>
+                    <td>{{dato.1}}</td>
+                    <td>{{dato.2}}</td>
+                    <td>{{dato.3}}</td>
+                    <td>{{dato.4}}</td>
+                    <td>{{dato.5}}</td>
+                    <td>{{dato.6}}</td>
+                    <td>{{dato.7}}</td>
+                    <td>{{dato.8}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}
