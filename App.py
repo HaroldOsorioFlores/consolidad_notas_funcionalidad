@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 def conexion():
     return pymysql.connect(host='localhost',
-                           password='harold134679',
+                           password='123',
                            user='root',
                            db='consolidado_notas',
                            port=3306)

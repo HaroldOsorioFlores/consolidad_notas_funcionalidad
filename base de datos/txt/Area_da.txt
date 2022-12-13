@@ -1,0 +1,7 @@
+5001,Matematica
+5002,Comunicación
+5003,Educacion Fisica
+5004,Educacion Religiosa
+5005,Arte y Cultura
+5006,Educacion en el trabajo
+5007,Competencias transversales

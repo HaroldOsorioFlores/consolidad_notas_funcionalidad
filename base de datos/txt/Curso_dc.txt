@@ -1,0 +1,13 @@
+4001,Aritmetica
+4002,Algebra
+4003,Geometria
+4004,Razonamiento Matematico
+4005,Lenguaje
+4006,Literatura 
+4007,Razonamiento Verbal
+4008,Educacion Fisica
+4009,Educacion en Valores
+4010,Arte y Cultura
+4011,Computacion
+4012,Aprendizaje Autonomo
+4013,Entornos Virtuales TIC

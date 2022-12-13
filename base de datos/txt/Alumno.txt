@@ -1,0 +1,10 @@
+75269164,Jose Garcia Navarro,Secundaria 1er año,Honest
+64195130,Antonio Rodriguez Torres,Secundaria 1er año,Honest
+71495827,Juan Gonzalez Dominguez,Secundaria 3er año,Honest
+42894383,Manuel Fernandez Ramos,Secundaria 1er año,Honest
+44707353,Francisco Lopez Vazquez,Secundaria 2do año,Honest
+59879294,Luis Martinez Ramirez,Secundaria 2do año,Honest
+30917295,Javier Sanchez Gil,Secundaria 2do año,Honest
+39970130,Miguel Perez Serrano,Secundaria 2do año,Honest
+42316544,Carlos Gomez Morales,Secundaria 1er año,Honest
+37510168,Angel Martin Molina,Secundaria 3er año,Honest
